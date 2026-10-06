@@ -3,3 +3,6 @@
 .gitignore
 node_modules/**
 *.vsix
+PLAN.md
+scripts/**
+package-lock.json
