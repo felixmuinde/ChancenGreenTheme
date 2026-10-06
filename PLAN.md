@@ -71,11 +71,13 @@ Also: Dark Green on Light Mint is 9.2, and Light Sage on white is 1.9, so sage i
 
 ### Dark ("Chancen Green Dark")
 
-- Editor `#0f1e12` (Deep Green), sidebar and activity bar slightly darker or `#0b160e`
-- Active chrome accents: Light Green `#84BD00` for borders and focus (large or non-text uses)
-- Brand-green moment: status bar `#1F4834` with white text (10.3)
-- Primary text Cream / White; secondary text Light Sage
-- Keywords and accent text: Bright Lime `#a0d931` (the guideline "best accent on dark")
+Moved from Deep Green backgrounds to a near-black with a faint green tint, so the brand greens read as accents (closer to the black-to-green gradient look in the guidelines).
+
+- Editor `#0b0e0c`; sidebar, activity bar, panel and tabs bar `#070908`; borders `#171d1a`
+- Brand-green moment: status bar `#1F4834` with white text (10.3). Selection and active list rows also use Dark Green.
+- Primary text warm off-white `#ece9e1`; secondary text Light Sage; comments and line numbers `#6f8f78` (passes 4.5:1)
+- Keywords and accents: Bright Lime `#a0d931` (the guideline "best accent on dark"); types and property names Light Green `#84BD00`
+- Strings sand `#e3c78a`, numbers and constants orange `#f0a35e`, functions teal `#7fd1c7`
 - Buttons: Mid Green `#3d7a45` with white text (5.2)
 
 ### Light ("Chancen Green Light")
@@ -87,10 +89,10 @@ Also: Dark Green on Light Mint is 9.2, and Light Sage on white is 1.9, so sage i
 
 ## 4. Build
 
-- [ ] Palette file or table in the repo (single source of truth) and a script that checks every foreground/background pair against 4.5:1
-- [ ] Dark theme: workbench colours, terminal (16 ANSI colours), widgets, diff/git, token colours, semantic tokens
-- [ ] Light theme: same, with the light-specific accent rules above
-- [ ] Register both in `package.json` (`vs-dark` and `vs`)
+- [x] Contrast check script (`npm run check`, `scripts/check-contrast.js`) covering the main text pairs, token colours and terminal colours. A shared palette file is not done: colours live in the two theme files.
+- [x] Dark theme (first pass): workbench colours, terminal (16 ANSI colours), widgets, diff/git, token colours, semantic tokens
+- [x] Light theme (first pass): same, with the light-specific accent rules above
+- [x] Register both in `package.json` (`vs-dark` and `vs`)
 - [ ] Languages to check: TypeScript/JavaScript, Python, HTML/CSS, JSON, Markdown, plus whatever else you use
 
 ## 5. Test
@@ -106,7 +108,7 @@ Also: Dark Green on Light Mint is 9.2, and Light Sage on white is 1.9, so sage i
 - [ ] 128x128 PNG icon. **Logo caveat:** the guidelines say the logo must be used exactly as supplied, from the master files. Use the official file if we use it at all, otherwise a simple non-logo mark.
 - [ ] Screenshots of both variants in `images/`, linked in README
 - [ ] `galleryBanner` colour (Deep Green) and theme in `package.json`
-- [ ] `repository`, `bugs`, `homepage` fields (publisher ID `FelixMuinde` is already set)
+- [x] `repository`, `bugs`, `homepage` fields (point at the personal GitHub repo; update if it moves to chancenhq) (publisher ID `FelixMuinde` is already set)
 - [ ] README tone: warm, clear, no jargon (per the guidelines' tone of voice)
 - [ ] CHANGELOG entry for the release
 
