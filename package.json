@@ -1,0 +1,35 @@
+{
+  "name": "chancen-green-theme",
+  "displayName": "Chancen Green Theme",
+  "description": "A green-accented dark theme for Visual Studio Code.",
+  "version": "0.0.1",
+  "publisher": "FelixMuinde",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "dark",
+    "green"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "Chancen Green",
+        "uiTheme": "vs-dark",
+        "path": "./themes/chancen-green-color-theme.json"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.0.0"
+  }
+}
