@@ -13,7 +13,9 @@ Goal: ship a polished dark + light VS Code theme pair, based on the 2026 Chancen
 ## 1. Decisions made
 
 - Two variants: **dark** (primary) and **light**
-- Name is provisional ("Chancen Green"); keep it in one place so a rename is cheap (`package.json` `displayName`/`name`, theme `name` fields, README)
+- Name stays provisional ("Chancen Green") while we test; keep it in few places so a rename is cheap (`package.json` `displayName`/`name`, theme `name` fields, README)
+- Publisher: you, under your own Marketplace account. Chancen name/colours/logo on a public listing may still need their OK, so keep that in mind before the public release (a private or pre-release `.vsix` is fine for testing).
+- High-contrast variants: later, after dark and light are done (not in v0.1.0)
 - Fonts: the guidelines say Helvetica Neue / Avenir. Themes can't set fonts, so code stays in the user's editor font. We only mention the brand fonts in the README, if at all.
 
 ## 2. Palette
@@ -88,7 +90,7 @@ Also: Dark Green on Light Mint is 9.2, and Light Sage on white is 1.9, so sage i
 - [ ] Palette file or table in the repo (single source of truth) and a script that checks every foreground/background pair against 4.5:1
 - [ ] Dark theme: workbench colours, terminal (16 ANSI colours), widgets, diff/git, token colours, semantic tokens
 - [ ] Light theme: same, with the light-specific accent rules above
-- [ ] Register both in `package.json` (`vs-dark` and `vs`), plus optional high-contrast variants later
+- [ ] Register both in `package.json` (`vs-dark` and `vs`)
 - [ ] Languages to check: TypeScript/JavaScript, Python, HTML/CSS, JSON, Markdown, plus whatever else you use
 
 ## 5. Test
@@ -104,7 +106,7 @@ Also: Dark Green on Light Mint is 9.2, and Light Sage on white is 1.9, so sage i
 - [ ] 128x128 PNG icon. **Logo caveat:** the guidelines say the logo must be used exactly as supplied, from the master files. Use the official file if we use it at all, otherwise a simple non-logo mark.
 - [ ] Screenshots of both variants in `images/`, linked in README
 - [ ] `galleryBanner` colour (Deep Green) and theme in `package.json`
-- [ ] `repository`, `bugs`, `homepage` fields; `YOUR-PUBLISHER-ID` replaced
+- [ ] `repository`, `bugs`, `homepage` fields (publisher ID `FelixMuinde` is already set)
 - [ ] README tone: warm, clear, no jargon (per the guidelines' tone of voice)
 - [ ] CHANGELOG entry for the release
 
@@ -117,6 +119,5 @@ Also: Dark Green on Light Mint is 9.2, and Light Sage on white is 1.9, so sage i
 
 ## Open questions
 
-1. **Publisher:** will this go out under your personal publisher or Chancen's? Using the Chancen name, colours and any logo on a public listing probably needs their sign-off, so it's worth confirming before publishing.
-2. **Final name** (e.g. "Chancen Green", "Chancen", something else)?
-3. **High-contrast variants** later, or skip?
+- Final name, once testing is done
+- Icon: official logo file from Chancen's shared drive, or a simple non-logo mark
