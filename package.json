@@ -32,6 +32,21 @@
         "path": "./themes/chancen-green-dark-color-theme.json"
       },
       {
+        "label": "Chancen Green Deep",
+        "uiTheme": "vs-dark",
+        "path": "./themes/chancen-green-deep-color-theme.json"
+      },
+      {
+        "label": "Chancen High Contrast",
+        "uiTheme": "hc-black",
+        "path": "./themes/chancen-high-contrast-color-theme.json"
+      },
+      {
+        "label": "Chancen Graphite",
+        "uiTheme": "vs-dark",
+        "path": "./themes/chancen-graphite-color-theme.json"
+      },
+      {
         "label": "Chancen Green Light",
         "uiTheme": "vs",
         "path": "./themes/chancen-green-light-color-theme.json"
