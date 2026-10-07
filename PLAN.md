@@ -12,7 +12,7 @@ Goal: ship a polished dark + light VS Code theme pair, based on the 2026 Chancen
 
 ## 1. Decisions made
 
-- Two variants: **dark** (primary) and **light**
+- Four variants, all kept: **Chancen Green Dark** (near-black, primary), **Chancen Green Deep** (dark-green surfaces), **Chancen Black** (darkest, near true black) and **Chancen Green Light**
 - Name stays provisional ("Chancen Green") while we test; keep it in few places so a rename is cheap (`package.json` `displayName`/`name`, theme `name` fields, README)
 - Publisher: you, under your own Marketplace account. Chancen name/colours/logo on a public listing may still need their OK, so keep that in mind before the public release (a private or pre-release `.vsix` is fine for testing).
 - High-contrast variants: later, after dark and light are done (not in v0.1.0)
