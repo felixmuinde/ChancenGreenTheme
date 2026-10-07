@@ -69,20 +69,22 @@ for (const file of fs.readdirSync(themesDir).filter((f) => f.endsWith("-color-th
   const name = theme.name;
   const c = theme.colors;
   const bg = c["editor.background"];
+  const strict = theme.type === "hc"; // high-contrast themes need 7:1 for text, 4.5:1 for UI
+  const need = (min) => (strict ? (min >= 4.5 ? 7 : 4.5) : min);
 
   for (const [fgKey, bgKey, min] of colourPairs) {
-    if (isOpaque(c[fgKey]) && isOpaque(c[bgKey])) report(name, `${fgKey} / ${bgKey}`, c[fgKey], c[bgKey], min);
+    if (isOpaque(c[fgKey]) && isOpaque(c[bgKey])) report(name, `${fgKey} / ${bgKey}`, c[fgKey], c[bgKey], need(min));
   }
   for (const key of Object.keys(c).filter((k) => k.startsWith("terminal.ansi") && k !== "terminal.ansiBlack")) {
-    report(name, key, c[key], c["terminal.background"], 3);
+    report(name, key, c[key], c["terminal.background"], need(3));
   }
   for (const rule of theme.tokenColors) {
     const fg = rule.settings.foreground;
-    if (isOpaque(fg)) report(name, `token ${[].concat(rule.scope)[0]}`, fg, bg, 4.5);
+    if (isOpaque(fg)) report(name, `token ${[].concat(rule.scope)[0]}`, fg, bg, need(4.5));
   }
   for (const [scope, value] of Object.entries(theme.semanticTokenColors || {})) {
     const fg = typeof value === "string" ? value : value.foreground;
-    if (isOpaque(fg)) report(name, `semantic ${scope}`, fg, bg, 4.5);
+    if (isOpaque(fg)) report(name, `semantic ${scope}`, fg, bg, need(4.5));
   }
 }
 
