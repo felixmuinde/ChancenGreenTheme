@@ -1,6 +1,6 @@
 # Chancen Green Theme
 
-Dark and light themes for Visual Studio Code, built on the Chancen International brand greens and tuned for comfortable reading.
+Four themes (three dark, one light) for Visual Studio Code, built on the Chancen International brand greens and tuned for comfortable reading.
 
 <!-- TODO: add screenshots (images/ folder) once the themes are tested. -->
 
@@ -8,7 +8,7 @@ Dark and light themes for Visual Studio Code, built on the Chancen International
 
 1. Open the Extensions view (`Ctrl+Shift+X`).
 2. Search for **Chancen Green Theme**.
-3. Click **Install**, then pick **Chancen Green Dark** or **Chancen Green Light** via `Ctrl+K Ctrl+T`.
+3. Click **Install**, then pick **Chancen Green Dark**, **Chancen Green Deep**, **Chancen Black** or **Chancen Green Light** via `Ctrl+K Ctrl+T`.
 
 ## Development
 
